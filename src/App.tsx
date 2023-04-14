@@ -1,8 +1,14 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import logo from './logo.svg';
 import './App.scss';
+import { MainContext } from './contexts/MainContext';
+import { User } from './interfaces/Models';
 
 function App() {
+
+  const main = useContext(MainContext);
+
+  console.log('user', main?.user)
   return (
     <div className="App">
       <header className="App-header">
